@@ -1,241 +1,171 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import { Shield, Target, Users, Zap } from 'lucide-react';
+import { DollarSign, Brain, TrendingUp, Shield, Zap, Users } from 'lucide-react';
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-32">
-            <div className="flex items-center">
-              <Link href="/" className="flex-shrink-0">
-                <Image 
-                  src="/FAUSA.png" 
-                  alt="FAUSA" 
-                  width={500} 
-                  height={167}
-                  className="h-24 w-auto"
-                />
-              </Link>
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <Link href="/" className="text-gray-600 hover:text-[#2563eb] px-3 py-2 rounded-md text-sm font-medium">
-                  Home
-                </Link>
-                <Link href="/about" className="text-gray-900 hover:text-[#2563eb] px-3 py-2 rounded-md text-sm font-medium">
-                  About
-                </Link>
-                <Link href="/privacy" className="text-gray-600 hover:text-[#2563eb] px-3 py-2 rounded-md text-sm font-medium">
-                  Privacy
-                </Link>
-                <Link href="/terms" className="text-gray-600 hover:text-[#2563eb] px-3 py-2 rounded-md text-sm font-medium">
-                  Terms
-                </Link>
-                <Link href="/signup" className="bg-[#2563eb] text-white hover:bg-[#1d4ed8] px-4 py-2 rounded-md text-sm font-medium">
-                  Get Started
-                </Link>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <Link href="/" className="flex items-center gap-3">
+              <div className="w-9 h-9 bg-emerald-500 rounded-full flex items-center justify-center">
+                <DollarSign className="w-5 h-5 text-white" />
               </div>
+              <span className="text-xl font-bold text-gray-900">FAUSA</span>
+              <span className="text-sm text-gray-500 hidden sm:block">AI Money Coach</span>
+            </Link>
+            <div className="hidden md:flex items-baseline space-x-4">
+              <Link href="/" className="text-gray-600 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Home</Link>
+              <Link href="/about" className="text-gray-900 hover:text-emerald-600 px-3 py-2 text-sm font-medium">About</Link>
+              <Link href="/privacy" className="text-gray-600 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Privacy</Link>
+              <Link href="/terms" className="text-gray-600 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Terms</Link>
+              <Link href="/" className="bg-emerald-500 text-white hover:bg-emerald-600 px-4 py-2 rounded-md text-sm font-medium">
+                Start Chatting
+              </Link>
             </div>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-b from-green-50 to-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl font-extrabold text-gray-900 mb-6">
-              About FAUSA
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're building the future of SMS verification, helping businesses verify customer identity while improving delivery rates.
-            </p>
-          </div>
+      {/* Hero */}
+      <section className="bg-gradient-to-b from-emerald-50 to-white py-20">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h1 className="text-5xl font-extrabold text-gray-900 mb-6">
+            About FAUSA
+          </h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            FAUSA is your personal AI money coach that teaches you smart saving and financial skills — and gets smarter about <em>your</em> needs the more you chat.
+          </p>
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      {/* Mission */}
+      <section className="max-w-5xl mx-auto px-4 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
             <p className="text-lg text-gray-600 mb-4">
-              FAUSA was created to solve a critical problem: businesses need a reliable way to verify customer identity via SMS while maintaining high delivery rates.
+              Most people never learned how to manage money. Schools don't teach it. Parents often don't know it. And financial advisors are expensive.
             </p>
             <p className="text-lg text-gray-600 mb-4">
-              We provide a simple, secure verification platform that acts as a trusted intermediary between businesses and their customers.
+              FAUSA was built to change that. We created an AI coach that meets you exactly where you are — whether you're just starting out or ready to optimize your wealth-building strategy.
             </p>
             <p className="text-lg text-gray-600">
-              Our goal is to make SMS verification seamless, secure, and accessible for businesses of all sizes.
+              The more you talk to FAUSA, the more it learns what financial skills you need to develop, and the more personalized your coaching becomes.
             </p>
           </div>
-          <div className="bg-green-50 rounded-2xl p-8">
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-                  <Target className="w-8 h-8 text-[#2563eb]" />
-                </div>
-                <div className="ml-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Focused on Quality</h3>
-                  <p className="text-gray-600">
-                    Built from the ground up to meet industry standards and best practices.
-                  </p>
-                </div>
+          <div className="bg-emerald-50 rounded-2xl p-8 space-y-6">
+            <div className="flex items-start gap-4">
+              <Brain className="w-8 h-8 text-emerald-500 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">Adaptive Learning</h3>
+                <p className="text-gray-600">FAUSA tracks what you know and what you need to learn, adjusting its coaching style as you grow.</p>
               </div>
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-                  <Shield className="w-8 h-8 text-[#2563eb]" />
-                </div>
-                <div className="ml-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Security First</h3>
-                  <p className="text-gray-600">
-                    Your customers' data is protected with enterprise-grade security measures.
-                  </p>
-                </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <TrendingUp className="w-8 h-8 text-emerald-500 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">Skill Progression</h3>
+                <p className="text-gray-600">Move from Beginner → Intermediate → Advanced as you master each financial topic.</p>
               </div>
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-                  <Zap className="w-8 h-8 text-[#2563eb]" />
-                </div>
-                <div className="ml-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Lightning Fast</h3>
-                  <p className="text-gray-600">
-                    Optimized for speed with sub-2-second page loads on mobile networks.
-                  </p>
-                </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <Shield className="w-8 h-8 text-emerald-500 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">No Judgment</h3>
+                <p className="text-gray-600">Ask any question, no matter how basic. FAUSA is here to help, not judge.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* How It Works */}
+      <section className="bg-gray-50 py-20">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">How FAUSA Works</h2>
+            <p className="text-xl text-gray-600">The more you chat, the smarter your coaching gets</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl p-8 shadow-md text-center">
+              <div className="w-14 h-14 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-emerald-600">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Start Chatting</h3>
+              <p className="text-gray-600">Ask any money question. FAUSA starts at your level and listens to understand your situation.</p>
+            </div>
+            <div className="bg-white rounded-xl p-8 shadow-md text-center">
+              <div className="w-14 h-14 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-emerald-600">2</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">FAUSA Learns</h3>
+              <p className="text-gray-600">With every message, FAUSA identifies your knowledge gaps and adjusts its teaching to fill them.</p>
+            </div>
+            <div className="bg-white rounded-xl p-8 shadow-md text-center">
+              <div className="w-14 h-14 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-emerald-600">3</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">You Level Up</h3>
+              <p className="text-gray-600">Track your progress from Beginner to Advanced as you build real financial skills that last a lifetime.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/* Why Choose Us Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      {/* Topics */}
+      <section className="max-w-5xl mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Businesses Choose Us</h2>
-          <p className="text-xl text-gray-600">
-            Trusted by companies that value compliance, security, and reliability
-          </p>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">What FAUSA Teaches</h2>
+          <p className="text-xl text-gray-600">6 core financial skill areas, personalized to you</p>
         </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Shield className="w-8 h-8 text-[#2563eb]" />
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { icon: '💰', title: 'Saving', desc: 'Emergency funds, high-yield accounts, automatic savings strategies' },
+            { icon: '📊', title: 'Budgeting', desc: '50/30/20 rule, zero-based budgeting, expense tracking' },
+            { icon: '💳', title: 'Debt', desc: 'Avalanche vs snowball methods, credit card traps, balance transfers' },
+            { icon: '📈', title: 'Investing', desc: 'Index funds, 401(k), Roth IRA, compound interest' },
+            { icon: '✂️', title: 'Frugal Living', desc: 'Grocery hacks, subscription audits, cutting costs without sacrifice' },
+            { icon: '💼', title: 'Earning More', desc: 'Salary negotiation, side hustles, passive income, skill building' },
+          ].map((topic, i) => (
+            <div key={i} className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-3xl mb-3">{topic.icon}</div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">{topic.title}</h3>
+              <p className="text-gray-600 text-sm">{topic.desc}</p>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Reliable Service</h3>
-            <p className="text-gray-600">
-              Built with industry best practices for maximum reliability.
-            </p>
-          </div>
-
-          <div className="text-center">
-            <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Users className="w-8 h-8 text-[#2563eb]" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Multi-Brand Support</h3>
-            <p className="text-gray-600">
-              Support multiple brands with customizable styling options.
-            </p>
-          </div>
-
-          <div className="text-center">
-            <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Zap className="w-8 h-8 text-[#2563eb]" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">High Performance</h3>
-            <p className="text-gray-600">
-              Global CDN ensures fast load times worldwide.
-            </p>
-          </div>
-
-          <div className="text-center">
-            <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Target className="w-8 h-8 text-[#2563eb]" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Easy Integration</h3>
-            <p className="text-gray-600">
-              Simple URL-based integration with comprehensive documentation.
-            </p>
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-[#2563eb] py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join businesses that trust FAUSA for SMS verification.
-          </p>
-          <Link
-            href="/signup"
-            className="inline-block px-8 py-4 bg-white text-[#2563eb] text-lg font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-lg"
-          >
-            Get Started Today
+      {/* CTA */}
+      <section className="bg-emerald-600 py-20">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Better Money Habits?</h2>
+          <p className="text-xl text-emerald-100 mb-8">Start chatting with FAUSA for free. No sign-up required.</p>
+          <Link href="/" className="inline-block px-8 py-4 bg-white text-emerald-600 text-lg font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-lg">
+            Start Your Money Journey →
           </Link>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#3b3a41] text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">FAUSA</h3>
-              <p className="text-gray-400">
-                SMS verification for businesses.
-              </p>
+      <footer className="bg-gray-900 text-white py-8">
+        <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex items-center gap-2">
+            <div className="w-7 h-7 bg-emerald-500 rounded-full flex items-center justify-center">
+              <DollarSign className="w-4 h-4 text-white" />
             </div>
-            <div>
-              <h4 className="font-semibold mb-4">Product</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/about" className="text-gray-400 hover:text-white">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/signup" className="text-gray-400 hover:text-white">
-                    Get Started
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/privacy" className="text-gray-400 hover:text-white">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/terms" className="text-gray-400 hover:text-white">
-                    Terms of Service
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <p className="text-gray-400">
-                support@usefausa.com
-              </p>
-              <p className="text-gray-400">
-                +18444353969
-              </p>
-            </div>
+            <span className="font-bold">FAUSA</span>
+            <span className="text-gray-400 text-sm">— AI Money Coach</span>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 FAUSA. All rights reserved.</p>
+          <div className="flex gap-6 text-sm text-gray-400">
+            <Link href="/about" className="hover:text-white">About</Link>
+            <Link href="/privacy" className="hover:text-white">Privacy</Link>
+            <Link href="/terms" className="hover:text-white">Terms</Link>
+            <a href="mailto:support@usefausa.com" className="hover:text-white">Contact</a>
           </div>
+          <p className="text-gray-500 text-xs">© 2025 FAUSA. All rights reserved.</p>
         </div>
       </footer>
     </div>

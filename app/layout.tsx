@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FAUSA - SMS Verification for Businesses",
-  description: "FAUSA provides carrier-compliant SMS verification and customer engagement solutions for businesses.",
+  title: "FAUSA - Your AI Money Coach",
+  description: "FAUSA is your personal AI money coach that teaches you smart saving tips and adapts to your financial skill level.",
 };
 
 export default function RootLayout({

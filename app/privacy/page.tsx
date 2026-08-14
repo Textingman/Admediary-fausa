@@ -1,260 +1,149 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import { DollarSign } from 'lucide-react';
 
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-32">
-            <div className="flex items-center">
-              <Link href="/" className="flex-shrink-0">
-                <Image 
-                  src="/FAUSA.png" 
-                  alt="FAUSA" 
-                  width={500} 
-                  height={167}
-                  className="h-24 w-auto"
-                />
-              </Link>
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <Link href="/" className="text-gray-600 hover:text-[#2563eb] px-3 py-2 rounded-md text-sm font-medium">
-                  Home
-                </Link>
-                <Link href="/about" className="text-gray-600 hover:text-[#2563eb] px-3 py-2 rounded-md text-sm font-medium">
-                  About
-                </Link>
-                <Link href="/privacy" className="text-gray-900 hover:text-[#2563eb] px-3 py-2 rounded-md text-sm font-medium">
-                  Privacy
-                </Link>
-                <Link href="/terms" className="text-gray-600 hover:text-[#2563eb] px-3 py-2 rounded-md text-sm font-medium">
-                  Terms
-                </Link>
-                <Link href="/signup" className="bg-[#2563eb] text-white hover:bg-[#1d4ed8] px-4 py-2 rounded-md text-sm font-medium">
-                  Get Started
-                </Link>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <Link href="/" className="flex items-center gap-3">
+              <div className="w-9 h-9 bg-emerald-500 rounded-full flex items-center justify-center">
+                <DollarSign className="w-5 h-5 text-white" />
               </div>
+              <span className="text-xl font-bold text-gray-900">FAUSA</span>
+              <span className="text-sm text-gray-500 hidden sm:block">AI Money Coach</span>
+            </Link>
+            <div className="hidden md:flex items-baseline space-x-4">
+              <Link href="/" className="text-gray-600 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Home</Link>
+              <Link href="/about" className="text-gray-600 hover:text-emerald-600 px-3 py-2 text-sm font-medium">About</Link>
+              <Link href="/privacy" className="text-gray-900 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Privacy</Link>
+              <Link href="/terms" className="text-gray-600 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Terms</Link>
+              <Link href="/" className="bg-emerald-500 text-white hover:bg-emerald-600 px-4 py-2 rounded-md text-sm font-medium">
+                Start Chatting
+              </Link>
             </div>
           </div>
         </div>
       </nav>
 
       {/* Header */}
-      <section className="bg-gradient-to-b from-green-50 to-white py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-b from-emerald-50 to-white py-12">
+        <div className="max-w-4xl mx-auto px-4">
           <h1 className="text-4xl font-extrabold text-gray-900 mb-4">Privacy Policy</h1>
-          <p className="text-lg text-gray-600">
-            Last Updated: December 30, 2025
-          </p>
+          <p className="text-lg text-gray-600">Last Updated: August 14, 2026</p>
         </div>
       </section>
 
       {/* Content */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <section className="max-w-4xl mx-auto px-4 py-12">
         <div className="prose prose-lg max-w-none">
-          
+
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">1. Introduction</h2>
           <p className="text-gray-600 mb-6">
-            FAUSA ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our SMS verification service and website.
+            FAUSA ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our AI money coaching service and website at usefausa.com.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">2. Information We Collect</h2>
-          
-          <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">2.1 Information You Provide</h3>
-          <p className="text-gray-600 mb-4">When you sign up for our service, we may collect:</p>
-          <ul className="list-disc pl-6 text-gray-600 mb-6 space-y-2">
-            <li>Name and contact information (email, phone number)</li>
-            <li>Company name and business information</li>
-            <li>Account credentials</li>
-            <li>Payment information (processed by third-party payment processors)</li>
-          </ul>
 
-          <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">2.2 Information Collected Automatically</h3>
-          <p className="text-gray-600 mb-4">When you use our verification service, we automatically collect:</p>
-          <ul className="list-disc pl-6 text-gray-600 mb-6 space-y-2">
-            <li>Device information (browser type, operating system)</li>
-            <li>IP address and location data</li>
-            <li>Usage data (pages visited, time spent, click patterns)</li>
-            <li>Verification timestamps and success/failure rates</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">2.3 Phone Number Handling</h3>
+          <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">2.1 Chat Conversations</h3>
           <p className="text-gray-600 mb-6">
-            <strong>Important:</strong> We do NOT store phone numbers used in the verification process. Phone numbers are only displayed (masked) during the verification flow and are not logged or retained in our systems. All tracking parameters are passed through without storing personal identifiable information.
+            FAUSA processes your chat messages locally in your browser session to provide personalized financial coaching. Your conversation history is stored only in your browser's session memory and is not transmitted to or stored on our servers.
           </p>
 
-          <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">2.4 Mobile Information Sharing</h3>
+          <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">2.2 Usage Data</h3>
+          <p className="text-gray-600 mb-4">When you use our service, we may automatically collect:</p>
+          <ul className="list-disc pl-6 text-gray-600 mb-6 space-y-2">
+            <li>Device information (browser type, operating system)</li>
+            <li>IP address and general location data</li>
+            <li>Pages visited and time spent on the site</li>
+            <li>Referring website information</li>
+          </ul>
+
+          <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">2.3 No Personal Financial Data Stored</h3>
           <p className="text-gray-600 mb-6">
-            <strong>No mobile information will be shared or sold to third parties for marketing purposes.</strong> We are committed to protecting your mobile information and will only use it for the purposes outlined in this Privacy Policy, such as providing our verification service and communicating with you about your account.
+            <strong>Important:</strong> FAUSA does NOT store, collect, or transmit any personal financial information you share in the chat. Your account numbers, balances, or specific financial details remain private and are never saved to our systems.
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">2.4 Mobile Information</h3>
+          <p className="text-gray-600 mb-6">
+            <strong>No mobile information will be shared or sold to third parties for marketing purposes.</strong> Any SMS communications you opt into are solely for account notifications and will be handled in accordance with this policy.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">3. How We Use Your Information</h2>
           <p className="text-gray-600 mb-4">We use the information we collect to:</p>
           <ul className="list-disc pl-6 text-gray-600 mb-6 space-y-2">
-            <li>Provide and maintain our verification service</li>
-            <li>Process your transactions and manage your account</li>
-            <li>Send you service-related communications</li>
-            <li>Improve our service and develop new features</li>
-            <li>Ensure compliance with carrier requirements and regulations</li>
-            <li>Detect and prevent fraud or abuse</li>
+            <li>Provide and improve our AI money coaching service</li>
+            <li>Personalize your learning experience</li>
+            <li>Analyze usage patterns to improve the platform</li>
+            <li>Ensure the security and integrity of our service</li>
             <li>Comply with legal obligations</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">4. Information Sharing and Disclosure</h2>
-          <p className="text-gray-600 mb-4">We may share your information with:</p>
-          
-          <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">4.1 Service Providers</h3>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">4. Information Sharing</h2>
           <p className="text-gray-600 mb-6">
-            Third-party vendors who perform services on our behalf, such as hosting, analytics, payment processing, and customer support. These providers are contractually obligated to protect your information.
-          </p>
-
-          <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">4.2 Business Transfers</h3>
-          <p className="text-gray-600 mb-6">
-            In connection with any merger, sale of company assets, financing, or acquisition of all or a portion of our business.
-          </p>
-
-          <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">4.3 Legal Requirements</h3>
-          <p className="text-gray-600 mb-6">
-            When required by law, court order, or government regulation, or when we believe disclosure is necessary to protect our rights, your safety, or the safety of others.
-          </p>
-
-          <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">4.4 With Your Consent</h3>
-          <p className="text-gray-600 mb-6">
-            We may share your information for any other purpose with your explicit consent.
+            We do not sell, trade, or rent your personal information to third parties. We may share anonymized, aggregated data for research or analytics purposes. We may share information with service providers who assist in operating our website, subject to confidentiality agreements.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">5. Data Security</h2>
           <p className="text-gray-600 mb-6">
-            We implement appropriate technical and organizational security measures to protect your information against unauthorized access, alteration, disclosure, or destruction. These measures include:
+            We implement appropriate technical and organizational security measures to protect your information. Our website uses HTTPS encryption. However, no method of internet transmission is 100% secure, and we cannot guarantee absolute security.
           </p>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">6. Cookies</h2>
+          <p className="text-gray-600 mb-6">
+            We use cookies and similar tracking technologies to improve your experience. You can instruct your browser to refuse cookies, though some features may not function properly without them.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">7. Your Rights</h2>
+          <p className="text-gray-600 mb-4">You have the right to:</p>
           <ul className="list-disc pl-6 text-gray-600 mb-6 space-y-2">
-            <li>Encryption of data in transit (HTTPS/TLS)</li>
-            <li>Secure hosting infrastructure with regular security audits</li>
-            <li>Access controls and authentication mechanisms</li>
-            <li>Regular security assessments and updates</li>
+            <li>Access the personal information we hold about you</li>
+            <li>Request correction of inaccurate information</li>
+            <li>Request deletion of your personal information</li>
+            <li>Opt out of marketing communications</li>
           </ul>
           <p className="text-gray-600 mb-6">
-            However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee absolute security.
+            To exercise these rights, contact us at <a href="mailto:privacy@usefausa.com" className="text-emerald-600 hover:text-emerald-700">privacy@usefausa.com</a>.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">6. Data Retention</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">8. Children's Privacy</h2>
           <p className="text-gray-600 mb-6">
-            We retain your information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. Account information is retained while your account is active and for a reasonable period thereafter for legal and business purposes.
+            Our service is not intended for individuals under 18. We do not knowingly collect personal information from children.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">7. Your Rights and Choices</h2>
-          <p className="text-gray-600 mb-4">Depending on your location, you may have the following rights:</p>
-          <ul className="list-disc pl-6 text-gray-600 mb-6 space-y-2">
-            <li><strong>Access:</strong> Request access to the personal information we hold about you</li>
-            <li><strong>Correction:</strong> Request correction of inaccurate or incomplete information</li>
-            <li><strong>Deletion:</strong> Request deletion of your personal information</li>
-            <li><strong>Portability:</strong> Request a copy of your information in a portable format</li>
-            <li><strong>Objection:</strong> Object to certain processing of your information</li>
-            <li><strong>Opt-out:</strong> Opt out of marketing communications</li>
-          </ul>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">9. Changes to This Policy</h2>
           <p className="text-gray-600 mb-6">
-            To exercise these rights, please contact us at <a href="mailto:privacy@usefausa.com" className="text-[#2563eb] hover:text-[#1d4ed8]">privacy@usefausa.com</a>.
+            We may update this Privacy Policy from time to time. We will notify you of changes by posting the updated policy on this page with a new "Last Updated" date.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">8. Cookies and Tracking Technologies</h2>
-          <p className="text-gray-600 mb-6">
-            We use cookies and similar tracking technologies to track activity on our service and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our service.
-          </p>
-
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">9. Third-Party Links</h2>
-          <p className="text-gray-600 mb-6">
-            Our service may contain links to third-party websites. We are not responsible for the privacy practices of these external sites. We encourage you to review the privacy policies of any third-party sites you visit.
-          </p>
-
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">10. Children's Privacy</h2>
-          <p className="text-gray-600 mb-6">
-            Our service is not intended for individuals under the age of 18. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please contact us immediately.
-          </p>
-
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">11. International Data Transfers</h2>
-          <p className="text-gray-600 mb-6">
-            Your information may be transferred to and processed in countries other than your country of residence. These countries may have data protection laws that differ from those in your country. We take appropriate safeguards to ensure your information remains protected in accordance with this Privacy Policy.
-          </p>
-
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">12. California Privacy Rights</h2>
-          <p className="text-gray-600 mb-6">
-            If you are a California resident, you have specific rights under the California Consumer Privacy Act (CCPA), including the right to know what personal information we collect, the right to delete your information, and the right to opt-out of the sale of your personal information. We do not sell personal information.
-          </p>
-
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">13. Changes to This Privacy Policy</h2>
-          <p className="text-gray-600 mb-6">
-            We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes.
-          </p>
-
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">14. Contact Us</h2>
-          <p className="text-gray-600 mb-4">
-            If you have any questions about this Privacy Policy or our privacy practices, please contact us:
-          </p>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">10. Contact Us</h2>
           <div className="bg-gray-50 rounded-lg p-6 mb-8">
-            <p className="text-gray-600 mb-2"><strong>Email:</strong> <a href="mailto:privacy@usefausa.com" className="text-[#2563eb] hover:text-[#1d4ed8]">privacy@usefausa.com</a></p>
-            <p className="text-gray-600 mb-2"><strong>Support:</strong> <a href="mailto:support@usefausa.com" className="text-[#2563eb] hover:text-[#1d4ed8]">support@usefausa.com</a></p>
-            <p className="text-gray-600"><strong>Website:</strong> <a href="/" className="text-[#2563eb] hover:text-[#1d4ed8]">https://usefausa.com</a></p>
+            <p className="text-gray-600 mb-2"><strong>Email:</strong> <a href="mailto:privacy@usefausa.com" className="text-emerald-600 hover:text-emerald-700">privacy@usefausa.com</a></p>
+            <p className="text-gray-600 mb-2"><strong>Support:</strong> <a href="mailto:support@usefausa.com" className="text-emerald-600 hover:text-emerald-700">support@usefausa.com</a></p>
+            <p className="text-gray-600"><strong>Website:</strong> <a href="https://usefausa.com" className="text-emerald-600 hover:text-emerald-700">https://usefausa.com</a></p>
           </div>
-
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#3b3a41] text-white py-12 mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">FAUSA</h3>
-              <p className="text-gray-400">
-                Carrier-compliant SMS verification for businesses.
-              </p>
+      <footer className="bg-gray-900 text-white py-8 mt-20">
+        <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex items-center gap-2">
+            <div className="w-7 h-7 bg-emerald-500 rounded-full flex items-center justify-center">
+              <DollarSign className="w-4 h-4 text-white" />
             </div>
-            <div>
-              <h4 className="font-semibold mb-4">Product</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/about" className="text-gray-400 hover:text-white">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/signup" className="text-gray-400 hover:text-white">
-                    Get Started
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/privacy" className="text-gray-400 hover:text-white">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/terms" className="text-gray-400 hover:text-white">
-                    Terms of Service
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <p className="text-gray-400">
-                support@usefausa.com
-              </p>
-              <p className="text-gray-400">
-                +18444353969
-              </p>
-            </div>
+            <span className="font-bold">FAUSA</span>
+            <span className="text-gray-400 text-sm">— AI Money Coach</span>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 FAUSA. All rights reserved.</p>
+          <div className="flex gap-6 text-sm text-gray-400">
+            <Link href="/about" className="hover:text-white">About</Link>
+            <Link href="/privacy" className="hover:text-white">Privacy</Link>
+            <Link href="/terms" className="hover:text-white">Terms</Link>
+            <a href="mailto:support@usefausa.com" className="hover:text-white">Contact</a>
           </div>
+          <p className="text-gray-500 text-xs">© 2025 FAUSA. All rights reserved.</p>
         </div>
       </footer>
     </div>
