@@ -234,7 +234,7 @@ export default function TextNotificationsPage() {
                       />
                       <label htmlFor="account-notif-consent" className="text-sm leading-relaxed text-white">
                         <span className="font-semibold text-emerald-300 block mb-1">📱 Account Notifications</span>
-                        By checking this box, I agree to receive <strong>account notification text messages</strong> from FAUSA at the mobile number provided. Account notifications may include session reminders, progress updates, security alerts, and important account information. Message frequency varies based on account activity. I understand I may opt out at any time by replying <strong>STOP</strong>. Reply <strong>HELP</strong> for help or email <a href="mailto:support@usefausa.com" className="underline text-emerald-300">support@usefausa.com</a>. Message and data rates may apply. Carriers are not liable for delayed or undelivered messages. Opting in is not required to use FAUSA.
+                        By checking this box, I agree to receive <strong>account notification text messages</strong> from FAUSA at the mobile number provided. Message frequency varies based on account activity. I understand I may opt out at any time by replying <strong>STOP</strong>. Reply <strong>HELP</strong> for help or email <a href="mailto:support@usefausa.com" className="underline text-emerald-300">support@usefausa.com</a>. Message and data rates may apply. Carriers are not liable for delayed or undelivered messages. Opting in is not required to use FAUSA.
                       </label>
                     </div>
                   </div>
@@ -251,7 +251,7 @@ export default function TextNotificationsPage() {
                       />
                       <label htmlFor="marketing-consent" className="text-sm leading-relaxed text-white">
                         <span className="font-semibold text-emerald-300 block mb-1">💡 Money Tips &amp; Promotional Messages</span>
-                        By checking this box, I agree to receive <strong>marketing and promotional text messages</strong> from FAUSA at the mobile number provided. Marketing messages may include personalized money-saving tips, financial coaching content, product updates, and special offers. Message frequency may vary. I understand I may opt out at any time by replying <strong>STOP</strong>. Reply <strong>HELP</strong> for help or email <a href="mailto:support@usefausa.com" className="underline text-emerald-300">support@usefausa.com</a>. Message and data rates may apply. Carriers are not liable for delayed or undelivered messages. Opting in is not required to use FAUSA.
+                        By checking this box, I agree to receive <strong>marketing and promotional text messages</strong> from FAUSA at the mobile number provided. Message frequency may vary. I understand I may opt out at any time by replying <strong>STOP</strong>. Reply <strong>HELP</strong> for help or email <a href="mailto:support@usefausa.com" className="underline text-emerald-300">support@usefausa.com</a>. Message and data rates may apply. Carriers are not liable for delayed or undelivered messages. Opting in is not required to use FAUSA.
                       </label>
                     </div>
                   </div>
