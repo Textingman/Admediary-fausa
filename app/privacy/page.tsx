@@ -18,6 +18,7 @@ export default function PrivacyPage() {
             <div className="hidden md:flex items-baseline space-x-4">
               <Link href="/" className="text-gray-600 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Home</Link>
               <Link href="/about" className="text-gray-600 hover:text-emerald-600 px-3 py-2 text-sm font-medium">About</Link>
+              <Link href="/text-notifications" className="text-gray-600 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Text Alerts</Link>
               <Link href="/privacy" className="text-gray-900 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Privacy</Link>
               <Link href="/terms" className="text-gray-600 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Terms</Link>
               <Link href="/" className="bg-emerald-500 text-white hover:bg-emerald-600 px-4 py-2 rounded-md text-sm font-medium">
