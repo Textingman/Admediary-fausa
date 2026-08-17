@@ -16,7 +16,6 @@ export default function TextNotificationsPage() {
   const [termsConsent, setTermsConsent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [activeTab, setActiveTab] = useState<'account' | 'marketing' | 'both'>('both');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -25,7 +24,6 @@ export default function TextNotificationsPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!termsConsent) return;
-    if (!accountNotifConsent && !marketingConsent) return;
 
     setIsSubmitting(true);
 
@@ -43,8 +41,7 @@ export default function TextNotificationsPage() {
   const isFormValid =
     formData.firstName.trim() &&
     formData.phone.trim() &&
-    termsConsent &&
-    (accountNotifConsent || marketingConsent);
+    termsConsent;
 
   return (
     <div className="min-h-screen bg-white">
@@ -103,7 +100,7 @@ export default function TextNotificationsPage() {
             <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Tag className="w-6 h-6 text-blue-600" />
             </div>
-            <h3 className="font-semibold text-gray-900 mb-2">Money Tips & Offers</h3>
+            <h3 className="font-semibold text-gray-900 mb-2">Money Tips &amp; Offers</h3>
             <p className="text-sm text-gray-600">Receive personalized financial tips, savings challenges, and exclusive coaching content.</p>
           </div>
           <div className="bg-purple-50 rounded-xl p-6 text-center">
@@ -111,32 +108,8 @@ export default function TextNotificationsPage() {
               <Phone className="w-6 h-6 text-purple-600" />
             </div>
             <h3 className="font-semibold text-gray-900 mb-2">Easy to Manage</h3>
-            <p className="text-sm text-gray-600">Reply STOP at any time to opt out. You're always in control of your notifications.</p>
+            <p className="text-sm text-gray-600">Reply STOP at any time to opt out. You&apos;re always in control of your notifications.</p>
           </div>
-        </div>
-      </section>
-
-      {/* Opt-In Type Tabs */}
-      <section className="max-w-3xl mx-auto px-4 pb-4">
-        <div className="flex rounded-xl overflow-hidden border border-gray-200 mb-8">
-          <button
-            onClick={() => setActiveTab('both')}
-            className={`flex-1 py-3 text-sm font-semibold transition-colors ${activeTab === 'both' ? 'bg-emerald-500 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
-          >
-            Both (Recommended)
-          </button>
-          <button
-            onClick={() => setActiveTab('account')}
-            className={`flex-1 py-3 text-sm font-semibold transition-colors border-l border-gray-200 ${activeTab === 'account' ? 'bg-emerald-500 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
-          >
-            Account Only
-          </button>
-          <button
-            onClick={() => setActiveTab('marketing')}
-            className={`flex-1 py-3 text-sm font-semibold transition-colors border-l border-gray-200 ${activeTab === 'marketing' ? 'bg-emerald-500 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
-          >
-            Tips & Offers Only
-          </button>
         </div>
       </section>
 
@@ -247,45 +220,41 @@ export default function TextNotificationsPage() {
 
                 {/* ─── Consent Checkboxes ─────────────────────────────────── */}
                 <div className="space-y-4 pt-2">
-                  <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Choose Your Notification Preferences</h3>
+                  <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Notification Preferences (Optional)</h3>
 
                   {/* Account Notifications Consent */}
-                  {(activeTab === 'account' || activeTab === 'both') && (
-                    <div className="bg-[#1e2a3a] rounded-xl p-5">
-                      <div className="flex items-start gap-3">
-                        <input
-                          type="checkbox"
-                          id="account-notif-consent"
-                          checked={accountNotifConsent}
-                          onChange={(e) => setAccountNotifConsent(e.target.checked)}
-                          className="mt-1 h-5 w-5 flex-shrink-0 accent-emerald-400"
-                        />
-                        <label htmlFor="account-notif-consent" className="text-sm leading-relaxed text-white">
-                          <span className="font-semibold text-emerald-300 block mb-1">📱 Account Notifications</span>
-                          By checking this box, I agree to receive <strong>account notification text messages</strong> from FAUSA at the mobile number provided. Account notifications may include session reminders, progress updates, security alerts, and important account information. Message frequency varies based on account activity. I understand I may opt out at any time by replying <strong>STOP</strong>. Reply <strong>HELP</strong> for help or email <a href="mailto:support@usefausa.com" className="underline text-emerald-300">support@usefausa.com</a>. Message and data rates may apply. Carriers are not liable for delayed or undelivered messages. Opting in is not required to use FAUSA.
-                        </label>
-                      </div>
+                  <div className="bg-[#1e2a3a] rounded-xl p-5">
+                    <div className="flex items-start gap-3">
+                      <input
+                        type="checkbox"
+                        id="account-notif-consent"
+                        checked={accountNotifConsent}
+                        onChange={(e) => setAccountNotifConsent(e.target.checked)}
+                        className="mt-1 h-5 w-5 flex-shrink-0 accent-emerald-400"
+                      />
+                      <label htmlFor="account-notif-consent" className="text-sm leading-relaxed text-white">
+                        <span className="font-semibold text-emerald-300 block mb-1">📱 Account Notifications</span>
+                        By checking this box, I agree to receive <strong>account notification text messages</strong> from FAUSA at the mobile number provided. Account notifications may include session reminders, progress updates, security alerts, and important account information. Message frequency varies based on account activity. I understand I may opt out at any time by replying <strong>STOP</strong>. Reply <strong>HELP</strong> for help or email <a href="mailto:support@usefausa.com" className="underline text-emerald-300">support@usefausa.com</a>. Message and data rates may apply. Carriers are not liable for delayed or undelivered messages. Opting in is not required to use FAUSA.
+                      </label>
                     </div>
-                  )}
+                  </div>
 
                   {/* Marketing / Promotional Consent */}
-                  {(activeTab === 'marketing' || activeTab === 'both') && (
-                    <div className="bg-[#1e2a3a] rounded-xl p-5">
-                      <div className="flex items-start gap-3">
-                        <input
-                          type="checkbox"
-                          id="marketing-consent"
-                          checked={marketingConsent}
-                          onChange={(e) => setMarketingConsent(e.target.checked)}
-                          className="mt-1 h-5 w-5 flex-shrink-0 accent-emerald-400"
-                        />
-                        <label htmlFor="marketing-consent" className="text-sm leading-relaxed text-white">
-                          <span className="font-semibold text-emerald-300 block mb-1">💡 Money Tips &amp; Promotional Messages</span>
-                          By checking this box, I agree to receive <strong>marketing and promotional text messages</strong> from FAUSA at the mobile number provided. Marketing messages may include personalized money-saving tips, financial coaching content, product updates, and special offers. Message frequency may vary. I understand I may opt out at any time by replying <strong>STOP</strong>. Reply <strong>HELP</strong> for help or email <a href="mailto:support@usefausa.com" className="underline text-emerald-300">support@usefausa.com</a>. Message and data rates may apply. Carriers are not liable for delayed or undelivered messages. Opting in is not required to use FAUSA.
-                        </label>
-                      </div>
+                  <div className="bg-[#1e2a3a] rounded-xl p-5">
+                    <div className="flex items-start gap-3">
+                      <input
+                        type="checkbox"
+                        id="marketing-consent"
+                        checked={marketingConsent}
+                        onChange={(e) => setMarketingConsent(e.target.checked)}
+                        className="mt-1 h-5 w-5 flex-shrink-0 accent-emerald-400"
+                      />
+                      <label htmlFor="marketing-consent" className="text-sm leading-relaxed text-white">
+                        <span className="font-semibold text-emerald-300 block mb-1">💡 Money Tips &amp; Promotional Messages</span>
+                        By checking this box, I agree to receive <strong>marketing and promotional text messages</strong> from FAUSA at the mobile number provided. Marketing messages may include personalized money-saving tips, financial coaching content, product updates, and special offers. Message frequency may vary. I understand I may opt out at any time by replying <strong>STOP</strong>. Reply <strong>HELP</strong> for help or email <a href="mailto:support@usefausa.com" className="underline text-emerald-300">support@usefausa.com</a>. Message and data rates may apply. Carriers are not liable for delayed or undelivered messages. Opting in is not required to use FAUSA.
+                      </label>
                     </div>
-                  )}
+                  </div>
 
                   {/* Terms & Privacy — Required */}
                   <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
@@ -307,18 +276,11 @@ export default function TextNotificationsPage() {
                         <Link href="/privacy" className="text-emerald-600 hover:text-emerald-700 font-medium underline">
                           Privacy Policy
                         </Link>
-                        , including the SMS messaging terms described above. <span className="text-red-500 font-semibold">*</span>
+                        . <span className="text-red-500 font-semibold">*</span>
                       </label>
                     </div>
                   </div>
                 </div>
-
-                {/* Validation Warning */}
-                {!accountNotifConsent && !marketingConsent && (
-                  <p className="text-sm text-amber-600 bg-amber-50 border border-amber-200 rounded-lg px-4 py-3">
-                    ⚠️ Please select at least one notification type above to continue.
-                  </p>
-                )}
 
                 {/* Submit Button */}
                 <button
@@ -339,29 +301,9 @@ export default function TextNotificationsPage() {
                       Submitting...
                     </span>
                   ) : (
-                    'Opt In to Text Notifications'
+                    'Submit'
                   )}
                 </button>
-
-                {/* Fine Print / Compliance Disclosure */}
-                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 text-xs text-gray-500 leading-relaxed space-y-2">
-                  <p>
-                    <strong>SMS Disclosure:</strong> By opting in, you consent to receive recurring automated text messages from FAUSA (Financial Awareness USA) at the mobile number provided. Consent is not a condition of purchase or use of any FAUSA service.
-                  </p>
-                  <p>
-                    <strong>To opt out:</strong> Reply <strong>STOP</strong> to any message to unsubscribe. You will receive a one-time confirmation message. After opting out, you will not receive further messages unless you re-enroll.
-                  </p>
-                  <p>
-                    <strong>For help:</strong> Reply <strong>HELP</strong> to any message or contact us at{' '}
-                    <a href="mailto:support@usefausa.com" className="text-emerald-600 hover:text-emerald-700">support@usefausa.com</a>{' '}
-                    or call <a href="tel:+18444353969" className="text-emerald-600 hover:text-emerald-700">+1 (844) 435-3969</a>.
-                  </p>
-                  <p>
-                    <strong>Message &amp; data rates may apply.</strong> Message frequency varies. Carriers are not liable for delayed or undelivered messages. No mobile information will be shared with third parties for marketing purposes. See our{' '}
-                    <Link href="/privacy" className="text-emerald-600 hover:text-emerald-700 underline">Privacy Policy</Link>{' '}
-                    for full details.
-                  </p>
-                </div>
               </form>
             </>
           )}
