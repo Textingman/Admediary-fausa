@@ -118,7 +118,7 @@ export default function TermsPage() {
             <li>You agree to receive text messages from FAUSA for account notifications and/or promotional/marketing messages.</li>
             <li>Message frequency varies based on your account activity and preferences.</li>
             <li>Message and data rates may apply. Check with your mobile carrier for details.</li>
-            <li>Reply <strong>HELP</strong> for help, or contact us at <a href="mailto:support@usefausa.com" className="text-emerald-600 hover:text-emerald-700">support@usefausa.com</a> or <a href="tel:+18444353969" className="text-emerald-600 hover:text-emerald-700">+1 (844) 435-3969</a>.</li>
+            <li>Reply <strong>HELP</strong> for help, or contact us at <a href="mailto:support@usefausa.com" className="text-emerald-600 hover:text-emerald-700">support@usefausa.com</a> or <a href="tel:+15165975008" className="text-emerald-600 hover:text-emerald-700">+1 (516) 597-5008</a>.</li>
             <li>Reply <strong>STOP</strong> to cancel and opt out of all SMS messages at any time. You will receive a one-time confirmation and will not receive further messages unless you re-enroll.</li>
             <li>Carriers are not liable for delayed or undelivered messages.</li>
             <li>Opting in to SMS is not required to use FAUSA services.</li>

@@ -232,7 +232,7 @@ export default function TextNotificationsPage() {
                       />
                       <label htmlFor="account-notif-consent" className="text-sm leading-relaxed text-white">
                         <span className="font-semibold text-emerald-300 block mb-1">📱 Account Notifications</span>
-                        By checking this box, I agree to receive <strong>account notification text messages</strong> from FAUSA at the mobile number provided. Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to cancel. Reply <strong>HELP</strong> for help or contact <a href="mailto:support@usefausa.com" className="underline text-emerald-300">support@usefausa.com</a> or +1 (844) 435-3969. Carriers are not liable for delayed or undelivered messages. Opting in is not required to use FAUSA. View our <Link href="/terms#sms-terms" className="underline text-emerald-300">SMS Terms &amp; Conditions</Link>.
+                        By checking this box, I agree to receive <strong>account notification text messages</strong> from FAUSA at the mobile number provided. Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to cancel. Reply <strong>HELP</strong> for help or contact <a href="mailto:support@usefausa.com" className="underline text-emerald-300">support@usefausa.com</a> or +1 (516) 597-5008. Carriers are not liable for delayed or undelivered messages. Opting in is not required to use FAUSA. View our <Link href="/terms#sms-terms" className="underline text-emerald-300">SMS Terms &amp; Conditions</Link>.
                       </label>
                     </div>
                   </div>
@@ -249,7 +249,7 @@ export default function TextNotificationsPage() {
                       />
                       <label htmlFor="marketing-consent" className="text-sm leading-relaxed text-white">
                         <span className="font-semibold text-emerald-300 block mb-1">💡 Money Tips &amp; Promotional Messages</span>
-                        By checking this box, I agree to receive <strong>marketing and promotional text messages</strong> from FAUSA at the mobile number provided. Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to cancel. Reply <strong>HELP</strong> for help or contact <a href="mailto:support@usefausa.com" className="underline text-emerald-300">support@usefausa.com</a> or +1 (844) 435-3969. Carriers are not liable for delayed or undelivered messages. Opting in is not required to use FAUSA. View our <Link href="/terms#sms-terms" className="underline text-emerald-300">SMS Terms &amp; Conditions</Link>.
+                        By checking this box, I agree to receive <strong>marketing and promotional text messages</strong> from FAUSA at the mobile number provided. Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to cancel. Reply <strong>HELP</strong> for help or contact <a href="mailto:support@usefausa.com" className="underline text-emerald-300">support@usefausa.com</a> or +1 (516) 597-5008. Carriers are not liable for delayed or undelivered messages. Opting in is not required to use FAUSA. View our <Link href="/terms#sms-terms" className="underline text-emerald-300">SMS Terms &amp; Conditions</Link>.
                       </label>
                     </div>
                   </div>
@@ -340,7 +340,7 @@ export default function TextNotificationsPage() {
               },
               {
                 q: 'How do I get help with my text notifications?',
-                a: 'Reply HELP to any message, or contact us at support@usefausa.com or +1 (844) 435-3969.',
+                a: 'Reply HELP to any message, or contact us at support@usefausa.com or +1 (516) 597-5008.',
               },
             ].map((item, i) => (
               <div key={i} className="bg-white rounded-xl p-6 shadow-sm">
