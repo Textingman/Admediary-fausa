@@ -40,7 +40,6 @@ export default function TextNotificationsPage() {
 
   const isFormValid =
     formData.firstName.trim() &&
-    formData.phone.trim() &&
     termsConsent;
 
   return (
@@ -62,8 +61,8 @@ export default function TextNotificationsPage() {
               <Link href="/text-notifications" className="text-gray-900 border-b-2 border-emerald-500 px-3 py-2 text-sm font-medium">Text Alerts</Link>
               <Link href="/privacy" className="text-gray-600 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Privacy</Link>
               <Link href="/terms" className="text-gray-600 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Terms</Link>
-              <Link href="/" className="bg-emerald-500 text-white hover:bg-emerald-600 px-4 py-2 rounded-md text-sm font-medium">
-                Start Chatting
+              <Link href="/text-notifications" className="bg-emerald-500 text-white hover:bg-emerald-600 px-4 py-2 rounded-md text-sm font-medium">
+                Get Text Alerts
               </Link>
             </div>
           </div>
@@ -182,7 +181,7 @@ export default function TextNotificationsPage() {
                 {/* Phone Field */}
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Mobile Phone Number <span className="text-red-500">*</span>
+                    Mobile Phone Number
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -192,7 +191,6 @@ export default function TextNotificationsPage() {
                       type="tel"
                       id="phone"
                       name="phone"
-                      required
                       value={formData.phone}
                       onChange={handleChange}
                       className="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-gray-900"
@@ -234,7 +232,7 @@ export default function TextNotificationsPage() {
                       />
                       <label htmlFor="account-notif-consent" className="text-sm leading-relaxed text-white">
                         <span className="font-semibold text-emerald-300 block mb-1">📱 Account Notifications</span>
-                        By checking this box, I agree to receive <strong>account notification text messages</strong> from FAUSA at the mobile number provided. Message frequency varies based on account activity. I understand I may opt out at any time by replying <strong>STOP</strong>. Reply <strong>HELP</strong> for help or email <a href="mailto:support@usefausa.com" className="underline text-emerald-300">support@usefausa.com</a>. Message and data rates may apply. Carriers are not liable for delayed or undelivered messages. Opting in is not required to use FAUSA.
+                        By checking this box, I agree to receive <strong>account notification text messages</strong> from FAUSA at the mobile number provided. Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to cancel. Reply <strong>HELP</strong> for help or contact <a href="mailto:support@usefausa.com" className="underline text-emerald-300">support@usefausa.com</a> or +1 (844) 435-3969. Carriers are not liable for delayed or undelivered messages. Opting in is not required to use FAUSA. View our <Link href="/terms#sms-terms" className="underline text-emerald-300">SMS Terms &amp; Conditions</Link>.
                       </label>
                     </div>
                   </div>
@@ -251,7 +249,7 @@ export default function TextNotificationsPage() {
                       />
                       <label htmlFor="marketing-consent" className="text-sm leading-relaxed text-white">
                         <span className="font-semibold text-emerald-300 block mb-1">💡 Money Tips &amp; Promotional Messages</span>
-                        By checking this box, I agree to receive <strong>marketing and promotional text messages</strong> from FAUSA at the mobile number provided. Message frequency may vary. I understand I may opt out at any time by replying <strong>STOP</strong>. Reply <strong>HELP</strong> for help or email <a href="mailto:support@usefausa.com" className="underline text-emerald-300">support@usefausa.com</a>. Message and data rates may apply. Carriers are not liable for delayed or undelivered messages. Opting in is not required to use FAUSA.
+                        By checking this box, I agree to receive <strong>marketing and promotional text messages</strong> from FAUSA at the mobile number provided. Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to cancel. Reply <strong>HELP</strong> for help or contact <a href="mailto:support@usefausa.com" className="underline text-emerald-300">support@usefausa.com</a> or +1 (844) 435-3969. Carriers are not liable for delayed or undelivered messages. Opting in is not required to use FAUSA. View our <Link href="/terms#sms-terms" className="underline text-emerald-300">SMS Terms &amp; Conditions</Link>.
                       </label>
                     </div>
                   </div>
@@ -271,8 +269,12 @@ export default function TextNotificationsPage() {
                         I have read and agree to the{' '}
                         <Link href="/terms" className="text-emerald-600 hover:text-emerald-700 font-medium underline">
                           Terms of Service
-                        </Link>{' '}
-                        and{' '}
+                        </Link>
+                        {' '}(including{' '}
+                        <Link href="/terms#sms-terms" className="text-emerald-600 hover:text-emerald-700 font-medium underline">
+                          SMS Terms
+                        </Link>
+                        ) and{' '}
                         <Link href="/privacy" className="text-emerald-600 hover:text-emerald-700 font-medium underline">
                           Privacy Policy
                         </Link>
