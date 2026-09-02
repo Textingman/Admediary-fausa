@@ -48,7 +48,7 @@ export default function TermsPage() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">2. Description of Service</h2>
           <p className="text-gray-600 mb-6">
-            FAUSA provides an AI-powered financial education and coaching platform that teaches money management skills including budgeting, saving, debt management, investing, and income growth. The Service includes:
+            FAUSA provides an AI-powered financial education and coaching platform that teaches money management skills including budgeting, saving, smart spending, cutting costs, and income growth. The Service includes:
           </p>
           <ul className="list-disc pl-6 text-gray-600 mb-6 space-y-2">
             <li>Interactive AI chat coaching sessions</li>
@@ -59,7 +59,7 @@ export default function TermsPage() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">3. Not Financial Advice</h2>
           <p className="text-gray-600 mb-6">
-            <strong>Important Disclaimer:</strong> FAUSA provides general financial education and information only. The content provided by FAUSA is not personalized financial, investment, tax, or legal advice. Always consult a qualified financial advisor, accountant, or attorney before making significant financial decisions. FAUSA is not a registered investment advisor, broker-dealer, or financial planner.
+            <strong>Important Disclaimer:</strong> FAUSA provides general financial education and information only. The content provided by FAUSA is not personalized financial, tax, or legal advice. Always consult a qualified financial advisor, accountant, or attorney before making significant financial decisions. FAUSA is not a registered financial advisor or financial planner.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">4. Acceptable Use</h2>
@@ -110,7 +110,21 @@ export default function TermsPage() {
             These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">11. Contact Information</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4" id="sms-terms">11. SMS Terms & Conditions</h2>
+          <p className="text-gray-600 mb-4">
+            By opting in to receive SMS messages from FAUSA, you agree to the following terms:
+          </p>
+          <ul className="list-disc pl-6 text-gray-600 mb-4 space-y-2">
+            <li>You agree to receive text messages from FAUSA for account notifications and/or promotional/marketing messages.</li>
+            <li>Message frequency varies based on your account activity and preferences.</li>
+            <li>Message and data rates may apply. Check with your mobile carrier for details.</li>
+            <li>Reply <strong>HELP</strong> for help, or contact us at <a href="mailto:support@usefausa.com" className="text-emerald-600 hover:text-emerald-700">support@usefausa.com</a> or <a href="tel:+18444353969" className="text-emerald-600 hover:text-emerald-700">+1 (844) 435-3969</a>.</li>
+            <li>Reply <strong>STOP</strong> to cancel and opt out of all SMS messages at any time. You will receive a one-time confirmation and will not receive further messages unless you re-enroll.</li>
+            <li>Carriers are not liable for delayed or undelivered messages.</li>
+            <li>Opting in to SMS is not required to use FAUSA services.</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">12. Contact Information</h2>
           <div className="bg-gray-50 rounded-lg p-6 mb-8">
             <p className="text-gray-600 mb-2"><strong>Email:</strong> <a href="mailto:legal@usefausa.com" className="text-emerald-600 hover:text-emerald-700">legal@usefausa.com</a></p>
             <p className="text-gray-600 mb-2"><strong>Support:</strong> <a href="mailto:support@usefausa.com" className="text-emerald-600 hover:text-emerald-700">support@usefausa.com</a></p>

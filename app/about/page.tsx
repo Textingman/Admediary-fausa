@@ -21,8 +21,8 @@ export default function AboutPage() {
               <Link href="/text-notifications" className="text-gray-600 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Text Alerts</Link>
               <Link href="/privacy" className="text-gray-600 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Privacy</Link>
               <Link href="/terms" className="text-gray-600 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Terms</Link>
-              <Link href="/" className="bg-emerald-500 text-white hover:bg-emerald-600 px-4 py-2 rounded-md text-sm font-medium">
-                Start Chatting
+              <Link href="/text-notifications" className="bg-emerald-500 text-white hover:bg-emerald-600 px-4 py-2 rounded-md text-sm font-medium">
+                Get Text Alerts
               </Link>
             </div>
           </div>
@@ -36,7 +36,7 @@ export default function AboutPage() {
             About FAUSA
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            FAUSA is your personal AI money coach that teaches you smart saving and financial skills — and gets smarter about <em>your</em> needs the more you chat.
+            FAUSA is your personal AI money coach that teaches you smart saving, budgeting, and money management skills — and gets smarter about <em>your</em> needs the more you chat.
           </p>
         </div>
       </section>
@@ -50,7 +50,7 @@ export default function AboutPage() {
               Most people never learned how to manage money. Schools don't teach it. Parents often don't know it. And financial advisors are expensive.
             </p>
             <p className="text-lg text-gray-600 mb-4">
-              FAUSA was built to change that. We created an AI coach that meets you exactly where you are — whether you're just starting out or ready to optimize your wealth-building strategy.
+              FAUSA was built to change that. We created an AI coach that meets you exactly where you are — whether you're just starting out or looking to get smarter about how you manage your money every day.
             </p>
             <p className="text-lg text-gray-600">
               The more you talk to FAUSA, the more it learns what financial skills you need to develop, and the more personalized your coaching becomes.
@@ -125,10 +125,10 @@ export default function AboutPage() {
           {[
             { icon: '💰', title: 'Saving', desc: 'Emergency funds, high-yield accounts, automatic savings strategies' },
             { icon: '📊', title: 'Budgeting', desc: '50/30/20 rule, zero-based budgeting, expense tracking' },
-            { icon: '💳', title: 'Debt', desc: 'Avalanche vs snowball methods, credit card traps, balance transfers' },
-            { icon: '📈', title: 'Investing', desc: 'Index funds, 401(k), Roth IRA, compound interest' },
-            { icon: '✂️', title: 'Frugal Living', desc: 'Grocery hacks, subscription audits, cutting costs without sacrifice' },
-            { icon: '💼', title: 'Earning More', desc: 'Salary negotiation, side hustles, passive income, skill building' },
+            { icon: '🛒', title: 'Smart Spending', desc: 'Grocery hacks, subscription audits, smarter shopping habits' },
+            { icon: '✂️', title: 'Cutting Costs', desc: 'Identify and eliminate wasteful spending without sacrificing quality of life' },
+            { icon: '💼', title: 'Earning More', desc: 'Salary negotiation, side hustles, skill building to boost income' },
+            { icon: '🎯', title: 'Financial Goals', desc: 'Set and track savings goals, build an emergency fund, create a plan that works' },
           ].map((topic, i) => (
             <div key={i} className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-3xl mb-3">{topic.icon}</div>
@@ -143,10 +143,17 @@ export default function AboutPage() {
       <section className="bg-emerald-600 py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Better Money Habits?</h2>
-          <p className="text-xl text-emerald-100 mb-8">Start chatting with FAUSA for free. No sign-up required.</p>
-          <Link href="/" className="inline-block px-8 py-4 bg-white text-emerald-600 text-lg font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-lg">
-            Start Your Money Journey →
+          <p className="text-xl text-emerald-100 mb-4">Sign up to receive personalized money tips directly to your phone. Free, no commitment.</p>
+          <p className="text-emerald-200 text-sm mb-8">
+            Message frequency varies. Message and data rates may apply. Reply STOP to cancel. Reply HELP for help.
+          </p>
+          <Link href="/text-notifications" className="inline-block px-8 py-4 bg-white text-emerald-600 text-lg font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-lg">
+            📱 Get Text Alerts →
           </Link>
+          <p className="mt-4 text-emerald-200 text-sm">
+            Opting in is not required to use FAUSA. View our{' '}
+            <Link href="/terms#sms-terms" className="underline hover:text-white">SMS Terms & Conditions</Link>.
+          </p>
         </div>
       </section>
 
