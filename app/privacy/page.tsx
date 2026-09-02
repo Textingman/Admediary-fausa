@@ -21,8 +21,8 @@ export default function PrivacyPage() {
               <Link href="/text-notifications" className="text-gray-600 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Text Alerts</Link>
               <Link href="/privacy" className="text-gray-900 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Privacy</Link>
               <Link href="/terms" className="text-gray-600 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Terms</Link>
-              <Link href="/" className="bg-emerald-500 text-white hover:bg-emerald-600 px-4 py-2 rounded-md text-sm font-medium">
-                Start Chatting
+              <Link href="/text-notifications" className="bg-emerald-500 text-white hover:bg-emerald-600 px-4 py-2 rounded-md text-sm font-medium">
+                Get Text Alerts
               </Link>
             </div>
           </div>
