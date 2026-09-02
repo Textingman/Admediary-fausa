@@ -231,23 +231,36 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 mt-4">
-        <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-2">
-            <div className="w-7 h-7 bg-emerald-500 rounded-full flex items-center justify-center">
-              <DollarSign className="w-4 h-4 text-white" />
+      <footer className="bg-gray-900 text-white py-10 mt-4">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between gap-8 mb-8">
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-7 h-7 bg-emerald-500 rounded-full flex items-center justify-center">
+                  <DollarSign className="w-4 h-4 text-white" />
+                </div>
+                <span className="font-bold">FAUSA</span>
+                <span className="text-gray-400 text-sm">— AI Money Coach</span>
+              </div>
+              <p className="text-gray-400 text-sm">1201 Orange Street, Suite 600</p>
+              <p className="text-gray-400 text-sm">Wilmington, DE 19801</p>
             </div>
-            <span className="font-bold">FAUSA</span>
-            <span className="text-gray-400 text-sm">— AI Money Coach</span>
+            <div className="flex flex-col gap-1 text-sm text-gray-400">
+              <p className="text-gray-300 font-semibold mb-1">Support</p>
+              <a href="mailto:support@usefausa.com" className="hover:text-white">support@usefausa.com</a>
+              <a href="tel:+15165975008" className="hover:text-white">+1 (516) 597-5008</a>
+            </div>
+            <div className="flex flex-col gap-2 text-sm text-gray-400">
+              <p className="text-gray-300 font-semibold mb-1">Links</p>
+              <Link href="/about" className="hover:text-white">About</Link>
+              <Link href="/text-notifications" className="hover:text-white">Text Alerts</Link>
+              <Link href="/privacy" className="hover:text-white">Privacy</Link>
+              <Link href="/terms" className="hover:text-white">Terms</Link>
+            </div>
           </div>
-          <div className="flex gap-6 text-sm text-gray-400">
-            <Link href="/about" className="hover:text-white">About</Link>
-            <Link href="/text-notifications" className="hover:text-white">Text Alerts</Link>
-            <Link href="/privacy" className="hover:text-white">Privacy</Link>
-            <Link href="/terms" className="hover:text-white">Terms</Link>
-            <a href="mailto:support@usefausa.com" className="hover:text-white">Contact</a>
+          <div className="border-t border-gray-800 pt-6 text-center">
+            <p className="text-gray-500 text-xs">© 2025 FAUSA. All rights reserved.</p>
           </div>
-          <p className="text-gray-500 text-xs">© 2025 FAUSA. All rights reserved.</p>
         </div>
       </footer>
     </div>
